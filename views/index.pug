@@ -1,0 +1,9 @@
+h1 User Contacts App
+section
+    each user in users
+        div
+            a(href=`/users/${user.id}`)=user.username
+section
+    form(action="/users" method="POST")
+        input(name="username" required=true placeholder="username")
+        button(type="submit") Add user

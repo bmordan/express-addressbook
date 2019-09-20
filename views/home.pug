@@ -1,0 +1,9 @@
+h1 #{user.username}'s Contacts
+section
+    each contact in contacts
+        div 👤#{contact.name} 📞#{contact.tel}
+section
+    form(action=`/users/${user.id}/contacts` method="POST")
+        input(name="name" required=true placeholder="contact name")
+        input(name="tel" type="number" placeholder="phone number")
+        button(type="submit") Add Contact
